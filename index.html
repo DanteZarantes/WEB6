@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selector Detective — The Party in Motion</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🏠 The Party, 19:30 – 22:30</h1>
+    <p class="subtitle">Selector Detective — find the thief and watch the party move</p>
+  </header>
+
+  <main class="layout">
+    <section id="house" class="house" aria-label="The house with guests"></section>
+
+    <aside class="legend">
+      <h2>Legend</h2>
+      <ul>
+        <li><span class="dot red"></span><span class="dot green"></span><span class="dot blue"></span><span class="dot yellow"></span><span class="dot purple"></span> Clothing color</li>
+        <li>📱 Phone</li>
+        <li>👓 Glasses</li>
+        <li>👜 Bag</li>
+        <li>🥤 Cup</li>
+        <li>🍪 Cake crumbs</li>
+        <li>🕐 Arrival time</li>
+        <li><span class="aitu-badge-inline">AITU</span> AITU student</li>
+      </ul>
+      <p class="tip">Click a guest for their card.<br>Click a case to spotlight.<br>Each room has <em>Sort by time</em>.</p>
+    </aside>
+  </main>
+
+  <section class="controls" aria-label="Cases">
+    <h2>Cases <button id="clearBtn" class="clear-btn">Clear (all bright)</button></h2>
+    <div id="caseButtons" class="case-buttons"></div>
+    <div class="result-box">
+      <strong>Result:</strong>
+      <span id="result">Click a case to investigate.</span>
+    </div>
+  </section>
+
+  <div id="cardOverlay" class="card-overlay" aria-hidden="true">
+    <div id="guestCard" class="guest-card" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
